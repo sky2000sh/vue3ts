@@ -4,6 +4,15 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    // Error "Cannot write file ... because it would overwrite input file."오류가 난다면,
+    //"allowJs" : true,
+    "noImplicitAny": false,    
+    //"outDir": "",
+    //  etc: 아래는 js 관련 설정
+    //  allowJs: true로 js 사용시 js의 오류 검사 여부
+    "checkJs": false,
+    // js파일 검색할 최대 깊이
+    "maxNodeModuleJsDepth": 0,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "skipLibCheck": true,
