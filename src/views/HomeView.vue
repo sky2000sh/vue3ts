@@ -4,7 +4,9 @@
     <button @click="fnCangeName('clerk')">Change Name</button>
     <button @click="fnChangeAge(13)">Change Age</button> -->
 
-    <p>{{ jobs[0].location }}</p>
+    <!-- <p>{{ jobs[0].location }}</p> -->
+
+    <JobsList :jobs="jobs"/>
   </div>
 </template>
 
@@ -38,12 +40,16 @@
 // export default class HomeView extends Vue {}
 
 import { defineComponent, reactive, ref, toRefs } from 'vue'
+import JobsList from '../views/JobsList.vue'
 import Job from '../types/index'
 
 export default defineComponent({
+  // name: 'App',
+  // components: {
+  // },
+
   name: 'App',
-  components: {
-  },
+  components: { JobsList },
 
   setup () {
     // const state = reactive({
@@ -91,7 +97,3 @@ export default defineComponent({
 })
 
 </script>
-
-function toRefs(state: { name: string; age: string|number }): any {
-  throw new Error('Function not implemented.')
-}
